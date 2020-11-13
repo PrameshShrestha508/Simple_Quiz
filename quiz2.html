@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+.container{
+height:800px;
+width:800px;
+margin-left:150px;
+border:2px solid red;
+}
+.heading{
+text-align: center;
+font-size:30px;
+
+}
+.output{
+	width: 300px;
+  border: 3px solid green;
+  padding:5px;
+   margin: 3px;
+	display:none;
+}
+
+.show .output{
+	display:block;
+}
+
+
+	</style>
+
+
+</head>
+<body>
+	<div class="container">
+		<h1 class="heading">Guess Quiz</h1>
+		<div class="display">
+			<p class="question"> Q.1)Who is father of computer?</p>
+			<p class="option">A.Charles Babbage B.Albert Einstein C.Ada Augusta</p>
+			<button class="btn">Click for answer</button>	
+			<p class="output">Answer:(A)Charles Babbage</p>
+		</div>
+		<div class="display">
+			<p class="question"> Q.2)Who is the first lady programar?</p>
+			<p class="option">A.Charles Babbage B.Albert Einstein C.Lady Ada Augusta</p>
+			<button class="btn">Click for answer</button>	
+			<p class="output">Answer:(C)Lady Ada Augusta</p>
+		</div>
+		<div class="display">
+			<p class="question"> Q.3)How many MB are there in 1GB ?</p>
+				<p class="option">A.200MB B.1020MB C.1024MB</p>
+			<button class="btn">Click for answer</button> 
+			<p class="output">Answer:(C)1024MB</p>
+		</div>
+		<div class="display">
+		<p class="question"> Q.4)Which is the part of the computer system that one can physically touch? ?</p>
+		<p class="option">A.data B.OS C.Hardware</p>
+	<button class="btn">Click for answer</button> 
+	<p class="output">Answer:(C)Hardware</p>
+</div>
+<div class="display">
+	<p class="question"> Q.5) IC chips used in computers are usually made of:?</p>
+		<p class="option">A.Lead B.Silicon C.Chromium</p>
+	<button class="btn">Click for answer</button> 	
+	<p class="output">Answer:(B)Silicon</p>
+	</div>
+	</div>
+</body>
+<script>
+
+var display=document.querySelectorAll(".display")
+var btns=document.querySelectorAll(".btn");
+// console.log(btn);
+btns.forEach(function(btn){
+btn.addEventListener("click",function(e){
+var display=e.currentTarget.parentElement;
+// console.log(display);
+ display.classList.toggle("show");
+});
+});
+
+
+
+
+
+
+
+</script>
+</html>
